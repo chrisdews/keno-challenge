@@ -19,3 +19,15 @@
     background-color: rgb(226, 84, 84);
     color: white;
 }
+
+.active-button {
+    border: 2px solid green !important
+}
+
+.inactive-button {
+    border: 2px solid grey !important
+}
+
+.secondaryButtonContainer{
+    margin: 10px
+}

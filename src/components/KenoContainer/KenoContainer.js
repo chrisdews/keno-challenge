@@ -3,16 +3,16 @@ import "./KenoContainer.css";
 import Header from "../Header";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import { green, purple } from "@material-ui/core/colors";
 
 function KenoContainer() {
   const [selectedNumbers, setSelectedNumbers] = useState([]);
-  const [stake, setStake] = useState(2.3);
+  const [stake, setStake] = useState(0);
   const [numbersConditionsMet, setNumbersConditionsMet] = useState(false);
   const [stakeConditionsMet, setStakeConditionsMet] = useState(false);
+  const [gameMessage, setGameMessage] = useState(false)
 
   const titleText = "KENO";
+  const stakeButtonContent = [1, 2, 5, 10, 20];
 
   const boardBuilder = (x, y) => {
     let board = [];
@@ -57,6 +57,49 @@ function KenoContainer() {
     }
   };
 
+  const stakeButtonClickHandler = (num) => {
+    setStake(num);
+  };
+
+  const handleStakeInputChange = (event) => {
+    setStake(event.target.value);
+  };
+
+  const activeButton = (num) => {
+    if (num === stake) {
+      return "active-button";
+    } else {
+      return "inactive-button";
+    }
+  };
+
+  const luckyClickHandler = () => {
+    let arr  = []
+    for (let i=0; i<5; i++){
+        arr.push(Math.floor(Math.random() * Math.floor(80)))
+    }
+    setSelectedNumbers(arr);
+  };
+
+  const clearClickHandler = () => {
+      setSelectedNumbers([])
+  }
+
+  const submitClickHandler = () => {
+    if(numbersConditionsMet && stakeConditionsMet){
+        setGameMessage('You win!')
+    }else if (stake.toString().split('.')[1].length > 2){
+        setGameMessage('too many decimals')
+    }
+    else if(!numbersConditionsMet){
+        setGameMessage('Select some numbers')
+    }else if (!stakeConditionsMet){
+        setGameMessage('Choose a stake')
+    }else{
+        setGameMessage(false)
+    }
+  }
+
   useEffect(() => {
     if (selectedNumbers.length > 0) {
       setNumbersConditionsMet(true);
@@ -82,10 +125,34 @@ function KenoContainer() {
   return (
     <>
       <Header titleText={titleText} />
-
       <Grid>{boardBuilder(8, 10)}</Grid>
+      {gameMessage && <div>{gameMessage}</div>}
+      {stakeButtonContent.map((num) => (
+        <Button
+          onClick={() => {
+            stakeButtonClickHandler(num);
+          }}
+          className={activeButton(num)}
+        >
+          {num}
+        </Button>
+      ))}
+      <input
+        type="text"
+        value={stake}
+        onChange={(e) => {
+          handleStakeInputChange(e);
+        }}
+      ></input>
 
-      {/* {board.map(num => <Grid>{num}</Grid>)} */}
+      <div className={"secondaryButtonContainer"}>
+        <Button onClick={luckyClickHandler}>Lucky Pick</Button>
+        <Button onClick={clearClickHandler}>Clear Picks</Button>
+      </div>
+
+      <div className={"submitButtonContainer"}>
+        <Button onClick={submitClickHandler}>Place Bet</Button>
+      </div>
     </>
   );
 }
