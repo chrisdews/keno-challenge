@@ -83,17 +83,22 @@ function KenoContainer() {
 
   const clearClickHandler = () => {
     setSelectedNumbers([]);
+    setGameMessage(false);
+    setNumbersConditionsMet(false);
+    setStakeConditionsMet(false);
   };
 
   const submitClickHandler = () => {
-    if (numbersConditionsMet && stakeConditionsMet) {
-      setGameMessage("You win!");
-    } else if (stake.toString().split(".")[1].length > 2) {
+    let isDecimal = stake.toString().split(".")[1];
+
+    if (isDecimal && isDecimal.length > 2) {
       setGameMessage("too many decimals");
     } else if (!numbersConditionsMet) {
       setGameMessage("Select some numbers");
     } else if (!stakeConditionsMet) {
       setGameMessage("Choose a stake");
+    } else if (numbersConditionsMet && stakeConditionsMet) {
+      setGameMessage("You win!");
     } else {
       setGameMessage(false);
     }
