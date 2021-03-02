@@ -1,7 +1,21 @@
-.selected {
+/* .selected  {
     background-color: aquamarine !important;
-}
+} */
 
 .min-width-button {
-    min-width: 50px !important;
+    min-width: 50px;
+}
+
+.active {
+    background-color: aquamarine;
+}
+
+.blue {
+    background-color: rgba(64, 201, 219, 0.849);
+    color: white;
+}
+
+.red {
+    background-color: rgb(226, 84, 84);
+    color: white;
 }
