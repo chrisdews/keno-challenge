@@ -9,7 +9,7 @@ function KenoContainer() {
   const [stake, setStake] = useState(0);
   const [numbersConditionsMet, setNumbersConditionsMet] = useState(false);
   const [stakeConditionsMet, setStakeConditionsMet] = useState(false);
-  const [gameMessage, setGameMessage] = useState(false)
+  const [gameMessage, setGameMessage] = useState(false);
 
   const titleText = "KENO";
   const stakeButtonContent = [1, 2, 5, 10, 20];
@@ -47,7 +47,7 @@ function KenoContainer() {
   };
 
   const clickHandler = (num) => {
-    if (selectedNumbers.length > 4) {
+    if (selectedNumbers.length > 4 && !selectedNumbers.includes(num)) {
       setSelectedNumbers(selectedNumbers.shift());
     }
     if (selectedNumbers.includes(num)) {
@@ -74,31 +74,30 @@ function KenoContainer() {
   };
 
   const luckyClickHandler = () => {
-    let arr  = []
-    for (let i=0; i<5; i++){
-        arr.push(Math.floor(Math.random() * Math.floor(80)))
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+      arr.push(Math.floor(Math.random() * Math.floor(80)));
     }
     setSelectedNumbers(arr);
   };
 
   const clearClickHandler = () => {
-      setSelectedNumbers([])
-  }
+    setSelectedNumbers([]);
+  };
 
   const submitClickHandler = () => {
-    if(numbersConditionsMet && stakeConditionsMet){
-        setGameMessage('You win!')
-    }else if (stake.toString().split('.')[1].length > 2){
-        setGameMessage('too many decimals')
+    if (numbersConditionsMet && stakeConditionsMet) {
+      setGameMessage("You win!");
+    } else if (stake.toString().split(".")[1].length > 2) {
+      setGameMessage("too many decimals");
+    } else if (!numbersConditionsMet) {
+      setGameMessage("Select some numbers");
+    } else if (!stakeConditionsMet) {
+      setGameMessage("Choose a stake");
+    } else {
+      setGameMessage(false);
     }
-    else if(!numbersConditionsMet){
-        setGameMessage('Select some numbers')
-    }else if (!stakeConditionsMet){
-        setGameMessage('Choose a stake')
-    }else{
-        setGameMessage(false)
-    }
-  }
+  };
 
   useEffect(() => {
     if (selectedNumbers.length > 0) {
