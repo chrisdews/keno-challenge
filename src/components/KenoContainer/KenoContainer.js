@@ -11,8 +11,14 @@ function KenoContainer() {
   const [stakeConditionsMet, setStakeConditionsMet] = useState(false);
   const [gameMessage, setGameMessage] = useState(false);
 
-  const titleText = "KENO";
-  const stakeButtonContent = [1, 2, 5, 10, 20];
+  const titleText = "Keno";
+  const stakeButtonContent = [
+    `${1} 💰`,
+    `${2} 💰`,
+    `${5} 💰`,
+    `${10} 💰`,
+    `${20} 💰`,
+  ];
 
   const boardBuilder = (x, y) => {
     let board = [];
@@ -35,7 +41,7 @@ function KenoContainer() {
             onClick={() => {
               clickHandler(num);
             }}
-            className={className + " min-width-button"}
+            className={className + " min-width-button" + " number"}
           >
             {num}
           </button>
@@ -58,15 +64,15 @@ function KenoContainer() {
   };
 
   const stakeButtonClickHandler = (num) => {
-    setStake(num);
+    setStake(num.split(" ")[0]);
   };
 
   const handleStakeInputChange = (event) => {
-    setStake(event.target.value);
+    setStake(event.target.value.split(" ")[0]);
   };
 
   const activeButton = (num) => {
-    if (num === stake) {
+    if (num.split(" ")[0] === stake) {
       return "active-button";
     } else {
       return "inactive-button";
@@ -110,9 +116,6 @@ function KenoContainer() {
     } else {
       setNumbersConditionsMet(false);
     }
-    return () => {
-      console.log("cleanup");
-    };
   }, [selectedNumbers]);
 
   useEffect(() => {
@@ -121,41 +124,43 @@ function KenoContainer() {
     } else {
       setStakeConditionsMet(false);
     }
-    return () => {
-      console.log("cleanup");
-    };
   }, [stake]);
 
   return (
     <>
       <Header titleText={titleText} />
       <Grid>{boardBuilder(8, 10)}</Grid>
-      {gameMessage && <div>{gameMessage}</div>}
-      {stakeButtonContent.map((num) => (
-        <Button
-          onClick={() => {
-            stakeButtonClickHandler(num);
+      <div className={"message-container"}>
+        <div className={"message"}>{gameMessage && gameMessage}</div>
+      </div>
+
+      <div className="stake-container">
+        {stakeButtonContent.map((num) => (
+          <button
+            onClick={() => {
+              stakeButtonClickHandler(num);
+            }}
+            className={"action-button " + activeButton(num)}
+          >
+            {num}
+          </button>
+        ))}
+        <input
+          type="text"
+          value={stake}
+          onChange={(e) => {
+            handleStakeInputChange(e);
           }}
-          className={activeButton(num)}
-        >
-          {num}
-        </Button>
-      ))}
-      <input
-        type="text"
-        value={stake}
-        onChange={(e) => {
-          handleStakeInputChange(e);
-        }}
-      ></input>
+        ></input>
+      </div>
 
       <div className={"secondaryButtonContainer"}>
-        <Button onClick={luckyClickHandler}>Lucky Pick</Button>
-        <Button onClick={clearClickHandler}>Clear Picks</Button>
+        <button className="action-button large" onClick={luckyClickHandler}>Lucky Pick</button>
+        <button className="action-button large" onClick={clearClickHandler}>Clear Picks</button>
       </div>
 
       <div className={"submitButtonContainer"}>
-        <Button onClick={submitClickHandler}>Place Bet</Button>
+        <button className="action-button large primary" onClick={submitClickHandler}>Place Bet</button>
       </div>
     </>
   );
