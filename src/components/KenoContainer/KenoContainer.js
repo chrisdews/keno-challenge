@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./KenoContainer.css";
 import Header from "../Header";
+import Button from "../Button"
 import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
 
 function KenoContainer() {
   const [selectedNumbers, setSelectedNumbers] = useState([]);
@@ -11,7 +11,7 @@ function KenoContainer() {
   const [stakeConditionsMet, setStakeConditionsMet] = useState(false);
   const [gameMessage, setGameMessage] = useState(false);
 
-  const titleText = "Keno";
+  const titleContent = "Keno";
   const stakeButtonContent = [
     `${1} 💰`,
     `${2} 💰`,
@@ -36,15 +36,15 @@ function KenoContainer() {
           className = "red";
         }
         row.push(
-          <button
+          <Button
             key={`key ${num}`}
             onClick={() => {
               clickHandler(num);
             }}
-            className={className + " min-width-button" + " number"}
+            className={`${className} min-width-button number`}
           >
             {num}
-          </button>
+          </Button>
         );
       }
       board.push(<Grid key={`row ${i + 1}`}>{row}</Grid>);
@@ -128,7 +128,7 @@ function KenoContainer() {
 
   return (
     <>
-      <Header titleText={titleText} />
+      <Header>{titleContent}</Header>
       <Grid>{boardBuilder(8, 10)}</Grid>
       <div className={"message-container"}>
         <div className={"message"}>{gameMessage && gameMessage}</div>
@@ -136,14 +136,16 @@ function KenoContainer() {
 
       <div className="stake-container">
         {stakeButtonContent.map((num) => (
-          <button
+          <Button
+            key={`buttons ${num}`}
             onClick={() => {
               stakeButtonClickHandler(num);
             }}
             className={"action-button " + activeButton(num)}
+            
           >
             {num}
-          </button>
+          </Button>
         ))}
         <input
           type="text"
@@ -155,12 +157,12 @@ function KenoContainer() {
       </div>
 
       <div className={"secondaryButtonContainer"}>
-        <button className="action-button large" onClick={luckyClickHandler}>Lucky Pick</button>
-        <button className="action-button large" onClick={clearClickHandler}>Clear Picks</button>
+        <Button key="lucky" className="action-button large" onClick={luckyClickHandler}>Lucky Pick</Button>
+        <Button key="clear" className="action-button large" onClick={clearClickHandler}>Clear Picks</Button>
       </div>
 
       <div className={"submitButtonContainer"}>
-        <button className="action-button large primary" onClick={submitClickHandler}>Place Bet</button>
+        <Button key="place" className="action-button large primary" onClick={submitClickHandler}>Place Bet</Button>
       </div>
     </>
   );

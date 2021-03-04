@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import './Header.css'
 
-const Header = ({ titleText }) => {
-  return <div className="header">{titleText}</div>;
+const Header = ({ children }) => {
+  return <div className="header">{children}</div>;
 };
 
 Header.propTypes = {
-  titleText: PropTypes.string,
+  children: PropTypes.any,
 };
 
 export default Header;

@@ -28,16 +28,7 @@
   background-color: rgba(119, 187, 98, 0.774);
 }
 
-.action-button.active-button {
-  border: 1px solid rgba(119, 187, 98, 0.774);
-  background-color: rgba(119, 187, 98, 0.774);
-  font-size: 1rem;
-}
 
-.inactive-button {
-  border: 1px solid grey;
-  color: rgb(226, 84, 84);
-}
 
 .secondaryButtonContainer {
   margin: 10px;
@@ -55,37 +46,6 @@
 
 .message {
   margin: auto;
-}
-
-.action-button {
-  width: 70px;
-  height: 30px;
-  margin: 0px 10px;
-  background-color: white;
-  border-radius: 3px;
-}
-
-.action-button:hover {
-  background-color: rgba(119, 187, 98, 0.774);
-}
-
-.action-button.large {
-    width: 130px;
-}
-
-.action-button.large.primary {
-    background-color: rgba(64, 201, 219, 0.849);
-    color: white;
-}
-
-.action-button.large.primary:hover {
-    background-color: white;
-    color: grey;
-}
-
-.large:hover {
-    background-color: rgba(64, 201, 219, 0.849);
-    color: white;
 }
 
 input {
