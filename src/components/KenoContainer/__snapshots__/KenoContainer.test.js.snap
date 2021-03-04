@@ -1,0 +1,607 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="header"
+  >
+    Keno
+  </div>,
+  <div
+    className="MuiGrid-root"
+  >
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        1
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        2
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        3
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        4
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        5
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        6
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        7
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        8
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        9
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        10
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        11
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        12
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        13
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        14
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        15
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        16
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        17
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        18
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        19
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        20
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        21
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        22
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        23
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        24
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        25
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        26
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        27
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        28
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        29
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        30
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        31
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        32
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        33
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        34
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        35
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        36
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        37
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        38
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        39
+      </button>
+      <button
+        className="blue min-width-button number"
+        onClick={[Function]}
+      >
+        40
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        41
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        42
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        43
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        44
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        45
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        46
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        47
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        48
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        49
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        50
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        51
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        52
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        53
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        54
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        55
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        56
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        57
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        58
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        59
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        60
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        61
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        62
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        63
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        64
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        65
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        66
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        67
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        68
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        69
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        70
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        71
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        72
+      </button>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        73
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        74
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        75
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        76
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        77
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        78
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        79
+      </button>
+      <button
+        className="red min-width-button number"
+        onClick={[Function]}
+      >
+        80
+      </button>
+    </div>
+  </div>,
+  <div
+    className="message-container"
+  >
+    <div
+      className="message"
+    />
+  </div>,
+  <div
+    className="stake-container"
+  >
+    <button
+      className="action-button inactive-button"
+      onClick={[Function]}
+    >
+      1 💰
+    </button>
+    <button
+      className="action-button inactive-button"
+      onClick={[Function]}
+    >
+      2 💰
+    </button>
+    <button
+      className="action-button inactive-button"
+      onClick={[Function]}
+    >
+      5 💰
+    </button>
+    <button
+      className="action-button inactive-button"
+      onClick={[Function]}
+    >
+      10 💰
+    </button>
+    <button
+      className="action-button inactive-button"
+      onClick={[Function]}
+    >
+      20 💰
+    </button>
+    <input
+      onChange={[Function]}
+      type="text"
+      value={0}
+    />
+  </div>,
+  <div
+    className="secondaryButtonContainer"
+  >
+    <button
+      className="action-button large"
+      onClick={[Function]}
+    >
+      Lucky Pick
+    </button>
+    <button
+      className="action-button large"
+      onClick={[Function]}
+    >
+      Clear Picks
+    </button>
+  </div>,
+  <div
+    className="submitButtonContainer"
+  >
+    <button
+      className="action-button large primary"
+      onClick={[Function]}
+    >
+      Place Bet
+    </button>
+  </div>,
+]
+`;
