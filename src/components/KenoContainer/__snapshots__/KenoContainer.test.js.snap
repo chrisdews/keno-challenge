@@ -4,6 +4,7 @@ exports[`renders correctly 1`] = `
 Array [
   <div
     className="header"
+    data-testid="keno-header"
   >
     Keno
   </div>,

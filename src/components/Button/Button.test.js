@@ -10,8 +10,12 @@ it('renders correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-// test('renders learn react link', () => {
-//   render(<Button />);
-//   const linkElement = screen.getByText(/1/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
+// test('Button', () => {
+//         const container = renderer.create(<Button />).toJSON()
+//         const title = container
+//         console.log(title)
+//         // expect(button.textContent).toBe('0')
+//         // fireEvent.click(button)
+//         // expect(button.textContent).toBe('1')
+//       })
+
