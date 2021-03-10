@@ -1,7 +1,10 @@
 import { array } from 'prop-types';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { fireEvent, render, screen } from '@testing-library/react';
 import KenoContainer from './KenoContainer';
+import Button from '../Button'
+
 
 
 it('renders correctly', () => {
@@ -11,11 +14,20 @@ it('renders correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-// test('counter increments the count', () => {
-//     const container = renderer.create(<KenoContainer />).toJSON()
-//     const button = container[2].children
-//     console.log(button)
-//     // expect(button.textContent).toBe('0')
-//     // fireEvent.click(button)
-//     // expect(button.textContent).toBe('1')
-//   })
+test('Click Place Bet before selecting numbers renders prompt to select picks', async () => {
+  render(<KenoContainer><Button></Button></KenoContainer>)
+  const submitButton = screen.getByRole('button', {name: 'Place Bet'})
+  fireEvent.click(submitButton)
+  const promptNode = await screen.getByRole('prompt')
+  expect(promptNode).toHaveTextContent(/select some numbers/i)
+})
+
+test('Click Place Bet before selecting a stake renders prompt to select a stake', async () => {
+  render(<KenoContainer><Button></Button></KenoContainer>)
+  const firstNumberButton = screen.getByRole('button', {name: '1'})
+  fireEvent.click(firstNumberButton)
+  const submitButton = await screen.getByRole('button', {name: 'Place Bet'})
+  fireEvent.click(submitButton)
+  const promptNode = await screen.getByRole('prompt')
+  expect(promptNode).toHaveTextContent(/choose a stake/i)
+})

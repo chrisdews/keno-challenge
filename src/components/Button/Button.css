@@ -1,6 +1,6 @@
 .action-button.active-button {
     border: 1px solid rgba(119, 187, 98, 0.774);
-    background-color: rgba(119, 187, 98, 0.774);
+    background-color: green;
     font-size: 1rem;
   }
   

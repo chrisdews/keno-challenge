@@ -537,6 +537,7 @@ Array [
   >
     <div
       className="message"
+      role="prompt"
     />
   </div>,
   <div
@@ -580,6 +581,7 @@ Array [
   </div>,
   <div
     className="secondaryButtonContainer"
+    data-testid="lucky-button-1"
   >
     <button
       className="action-button large"

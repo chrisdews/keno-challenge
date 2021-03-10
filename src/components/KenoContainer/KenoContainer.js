@@ -37,6 +37,8 @@ function KenoContainer() {
         }
         row.push(
           <Button
+            data-testid={`keno-button-${num}`}
+            role="number-selection"
             key={`key ${num}`}
             onClick={() => {
               clickHandler(num);
@@ -131,12 +133,13 @@ function KenoContainer() {
       <Header>{titleContent}</Header>
       <Grid>{boardBuilder(8, 10)}</Grid>
       <div className={"message-container"}>
-        <div className={"message"}>{gameMessage && gameMessage}</div>
+        <div className={"message"} role="prompt">{gameMessage && gameMessage}</div>
       </div>
 
       <div className="stake-container">
         {stakeButtonContent.map((num) => (
           <Button
+            data-testid={`stake-button-${num}`}
             key={`buttons ${num}`}
             onClick={() => {
               stakeButtonClickHandler(num);
@@ -156,13 +159,13 @@ function KenoContainer() {
         ></input>
       </div>
 
-      <div className={"secondaryButtonContainer"}>
-        <Button key="lucky" className="action-button large" onClick={luckyClickHandler}>Lucky Pick</Button>
-        <Button key="clear" className="action-button large" onClick={clearClickHandler}>Clear Picks</Button>
+      <div className={"secondaryButtonContainer"} data-testid="lucky-button-1">
+        <Button  key="lucky" className="action-button large" onClick={luckyClickHandler}>Lucky Pick</Button>
+        <Button data-testid="clear-button-1" key="clear" className="action-button large" onClick={clearClickHandler}>Clear Picks</Button>
       </div>
 
       <div className={"submitButtonContainer"}>
-        <Button key="place" className="action-button large primary" onClick={submitClickHandler}>Place Bet</Button>
+        <Button  data-testid={`submit-button-1`} key="place" className="action-button large primary" onClick={submitClickHandler}>Place Bet</Button>
       </div>
     </>
   );
