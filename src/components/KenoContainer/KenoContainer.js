@@ -153,6 +153,7 @@ function KenoContainer() {
         <input
           type="text"
           value={stake}
+          aria-label="stake-input"
           onChange={(e) => {
             handleStakeInputChange(e);
           }}

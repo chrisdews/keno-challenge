@@ -11,13 +11,13 @@ it('renders correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-describe('Button tests', () => {
-  test('Button calls clickHandler when clicked', () => {
-        const handleClick = jest.fn()
-        render(<Button onClick={handleClick}>click me</Button>)
-        fireEvent.click(screen.getByText(/click me/i))
-        expect(handleClick).toHaveBeenCalledTimes(1)
-  })
+// describe('Button tests', () => {
+//   test('Button calls clickHandler when clicked', () => {
+//         const handleClick = jest.fn()
+//         render(<Button onClick={handleClick}>click me</Button>)
+//         fireEvent.click(screen.getByText(/click me/i))
+//         expect(handleClick).toHaveBeenCalledTimes(1)
+//   })
 
 
-})
+// })

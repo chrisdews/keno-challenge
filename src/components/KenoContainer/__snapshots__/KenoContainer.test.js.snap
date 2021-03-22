@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders Snapshot correctly 1`] = `
 Array [
   <div
     className="header"
@@ -574,6 +574,7 @@ Array [
       20 💰
     </button>
     <input
+      aria-label="stake-input"
       onChange={[Function]}
       type="text"
       value={0}
